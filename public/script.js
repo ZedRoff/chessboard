@@ -255,32 +255,33 @@ elems.forEach((elem) => {
         }
       }
     } else if (type == "NB" || type == "NW") {
+ 
       if (!(x - 2 < 0 || x - 2 > 7 || y + 1 > 7 || y + 1 < 0)) {
-        uls[x - 2].children[y + 1].style.background = "grey";
+        uls[x - 2].children[y + 1].style.background = "grey"; // haut droite
       }
 
-      if (!(x - 2 < 0 || y - 1 > 7 || y - 1 < 0 || x - 2 > 7)) {
-        uls[x - 2].children[y - 1].style.background = "grey";
-
-        if (!(x + 2 > 7 || y + 1 > 7 || y + 1 < 0 || x + 2 < 0)) {
-          uls[x + 2].children[y + 1].style.background = "grey";
+      if (!(x - 2 < 0 || x - 2 > 7 || y - 1 > 7 || y - 1 < 0 )) {
+        uls[x - 2].children[y - 1].style.background = "grey"; // haut gauche
+      }
+        if (!(x + 2 > 7|| x + 2 < 0 || y + 1 > 7 || y + 1 < 0 )) {
+          uls[x + 2].children[y + 1].style.background = "grey"; // bas droite
         }
 
-        if (!(x + 2 > 7 || y - 1 > 7 || y - 1 < 0 || x + 2 < 0)) {
-          uls[x + 2].children[y - 1].style.background = "grey";
+        if (!(x + 2 > 7 || x + 2 < 0 || y - 1 > 7 || y - 1 < 0)) {
+          uls[x + 2].children[y - 1].style.background = "grey"; // bas gauche
         }
         if (!(x - 1 < 0 || x - 1 > 7 || y - 2 < 0 || y - 2 > 7)) {
-          uls[x - 1].children[y - 2].style.background = "grey";
+          uls[x - 1].children[y - 2].style.background = "grey"; // gauche haut
         }
         if (!(x - 1 < 0 || x - 1 > 7 || y + 2 > 7 || y + 2 < 0)) {
-          uls[x - 1].children[y + 2].style.background = "grey";
+          uls[x - 1].children[y + 2].style.background = "grey"; // droite haut
         }
         if (!(x + 1 < 0 || x + 1 > 7 || y - 2 < 0 || y - 2 > 7)) {
-          uls[x + 1].children[y - 2].style.background = "grey";
+          uls[x + 1].children[y - 2].style.background = "grey"; // gauche bas
         }
         if (!(x + 1 < 0 || x + 1 > 7 || y + 2 > 7 || y + 2 < 0)) {
-          uls[x + 1].children[y + 2].style.background = "grey";
-        }
+          uls[x + 1].children[y + 2].style.background = "grey"; // droite bas
+        
       }
     } else if (type == "KW" || type == "KB") {
       if (!(x + 1 < 0 || x + 1 > 7 || y + 1 < 0 || y + 1 > 7)) {
